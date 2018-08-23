@@ -186,13 +186,13 @@
             </div>
         </div>
     </section>
-    <section id="contact" style="background-color:#f7e859;">
+    <section id="contact" style="background-color:#f7e859;" action="{{ url_for('contact') }}" method="POST">
         <div class="container">
             <h2 class="text-uppercase text-center text-secondary mb-0">Contact</h2>
             <hr class="star-dark mb-5">
             <div class="row">
                 <div class="col-lg-8 mx-auto">
-                    <form id="contactForm" name="sentMessage" novalidate="novalidate">
+                    <form id="contactForm" name="sentMessage" novalidate="novalidate" >
                         <div class="control-group">
                             <div class="form-group floating-label-form-group controls mb-0 pb-2"><label>Name</label><input class="form-control" type="text" required="" placeholder="Name" id="name" name="name"><small class="form-text text-danger help-block"></small></div>
                         </div>
