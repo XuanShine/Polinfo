@@ -1,5 +1,6 @@
 import os
-from flask import Flask, render_template
+from flask import Flask, render_template, request, redirect, url_for
+import requests
 
 app = Flask(__name__)
 
@@ -11,7 +12,7 @@ def index():
 
 @app.route("/contact", methods=["POST"])
 def contact():
-    apikey_mailgun = os.environ.get("apikey_mailgun")
+    apikey_mailgun_polinfo = os.environ.get("apikey_mailgun_polinfo")
     name = request.form.get("name")
     email = request.form.get("email")
     phone = request.form.get("phone")
