@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Une équipe d'informaticiens pour votre entreprise">
+    <title>Home - POLINFO</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='bootstrap/css/bootstrap.min.css') }}">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,700">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.min.css') }}">
+</head>
+
+<body id="page-top">
+    <nav class="navbar navbar-light navbar-expand-lg fixed-top bg-secondary text-uppercase" id="mainNav">
+        <div class="container"><a class="navbar-brand js-scroll-trigger" href="#page-top">POLINFO</a><button class="navbar-toggler navbar-toggler-right text-uppercase bg-primary text-white rounded" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive"
+                aria-expanded="false" aria-label="Toggle navigation"><i class="fa fa-bars"></i></button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="nav navbar-nav ml-auto">
+                    <li class="nav-item mx-0 mx-lg-1" role="presentation"><a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#portfolio">Notre travail</a></li>
+                    <li class="nav-item mx-0 mx-lg-1" role="presentation"><a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#process">Processus</a></li>
+                    <li class="nav-item mx-0 mx-lg-1" role="presentation"><a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#contact">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <header class="masthead bg-primary text-white text-center">
+        <div class="container d-flex flex-column vh-50">
+            <div class="flex-grow-1">
+                <h1>POLINFO</h1>
+                <hr class="star-light">
+                <h2 class="font-weight-light mb-0">Dotez-vous d'un pôle informatique !</h2>
+            </div>
+        </div>
+    </header>
+    <section id="portfolio" class="portfolio" style="background-image:url({{ url_for('static', filename='img/portfolio/cabin.png') }});">
+        <div class="container">
+            <h2 class="text-uppercase text-center text-secondary">Notre travail</h2>
+            <hr class="star-dark mb-5">
+            <div class="row">
+                <div class="col-12 col-sm-6 col-md-6 col-lg-3 offset-xl-0 d-flex" style="padding:5px 15px;">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Automation</h5>
+                            <p class="card-text">Une action répétée sur l'ordinateur ? Nous pouvons concevoir un programme <strong>robot&nbsp;</strong>capable de reproduire vos actions afin de vous faire gagner du temps.</p>
+                        </div><button class="btn btn-primary" type="button" style="margin:20px 10px;" data-toggle="modal" data-target="#automationModal">Des exemples</button></div>
+                </div>
+                <div class="col-12 col-sm-6 col-md-6 col-lg-3 offset-lg-0 d-flex" style="padding:5px 15px;">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Conseils</h5>
+                            <p class="card-text">Nos équipes sont là pour vous conseiller dans vos <strong>choix de décision</strong> en fonction de vos objectifs.</p>
+                        </div><button class="btn btn-primary" type="button" style="margin:20px 10px;padding:6px 12px;" data-toggle="modal" data-target="#conseilModal">En savoir plus</button></div>
+                </div>
+                <div class="col-12 col-sm-6 col-md-6 col-lg-3 d-flex" style="padding:5px 15px;">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Site Web</h5>
+                            <p class="card-text">Une <strong>présence sur internet</strong> afin de communiquer au monde votre savoir-faire et toucher une forte audience.</p>
+                        </div><button class="btn btn-primary" type="button" style="margin:20px 10px;" data-toggle="modal" data-target="#websiteModal">Maquette gratuite - 24h</button></div>
+                </div>
+                <div class="col-12 col-sm-6 col-md-6 col-lg-3 d-flex" style="padding:5px 15px;">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Application</h5>
+                            <p class="card-text">Que le logiciel soit pour votre entreprise ou vos clients, sur mobile, tablette, ordinateur, ou à travers le web, nous sommes en mesure de vous accompagner dans vos requêtes.</p>
+                        </div><a href="#contact" class="btn btn-primary" style="margin:20px 10px;">Demander un devis</a></div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <div class="modal fade" role="dialog" tabindex="-1" id="automationModal">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title">Exemples d'automation</h4><button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button></div>
+                <div class="modal-body">
+                    <h6>Manipulation de fichiers</h6>
+                    <p>Créer, mettre à jour, déplacer, renommer des fichiers et des dossiers.</p>
+                    <h6>Recherche de texte</h6>
+                    <p>Rechercher une information dans un fichier ou à travers de multiples fichiers.</p>
+                    <h6>Web</h6>
+                    <p>Rechercher sur le web et télécharger des fichiers.<br>Extraire des informations dans une page web.<br>Automatiser des actions sur les pages web.</p>
+                    <h6>Email</h6>
+                    <p>Envoyer des emails de rappel et des textes pour notifier.</p>
+                    <h6>Travailler avec les fichiers Excel de toutes tailles.</h6>
+                    <h6>Séparer, fusionner, crypter les fichier PDFs.</h6>
+                    <h6>Remplir les formulaires en lignes</h6>
+                    <h6>Plannifier les tâches, lancer les programmes</h6>
+                    <h6>Manipuler les images, les vidéos</h6>
+                    <h6>Contrôler le clavier et la souris</h6>
+                    <h6>Et toutes les idées qui peuvent vous passer par la tête..</h6>
+                </div>
+                <div class="modal-footer"><button class="btn btn-light" type="button" data-dismiss="modal">Fermer</button></div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" role="dialog" tabindex="-1" id="conseilModal">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title">Des conseils personnalisés</h4><button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button></div>
+                <div class="modal-body">
+                    <p>Polinfo s'assure de vous fournir des conseils pertinents sur les différents parties de vos projets. Tantôt niveau sécurité, amélioration de l'interface utilisateur, de la meilleur technologie à utiliser.<br><br>Des conseils gratuits
+                        avec pour seule ambition: <strong>votre satisfaction</strong>.</p>
+                </div>
+                <div class="modal-footer"><button class="btn btn-light" type="button" data-dismiss="modal">Fermer</button></div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" role="dialog" tabindex="-1" id="websiteModal">
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title">Site Web</h4><button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button></div>
+                <div class="modal-body">
+                    <h5>Services</h5>
+                    <ul>
+                        <li>Nom de domaine: www.votre-site-web.fr (.com .net .org)</li>
+                        <li>Hébergement sur serveur sécurisé</li>
+                    </ul>
+                    <h5>Délai</h5>
+                    <p>En moyenne: <strong>4&nbsp;jours/page</strong>.<br><strong>Aperçu</strong> de votre site en cours de construction avec un <strong>code sécurisé</strong>.<br>Pour une simple <strong>maquette: 24h.</strong></p>
+                    <h5>Photos - Vidéos - Graphismes</h5>
+                    <p>Nous travaillons avec l'agence de communication&nbsp;<a href="#">4YOU</a>&nbsp;pour les photos et vidéos.</p>
+                    <h5>Tarifs</h5>
+                    <p>Les <strong>sites webs changent</strong> en fonction du moment, des tendances, elles s'améliorent avec vos <strong>nouvelles idées</strong>.<br><br>Nos tarifs sont calculés mensuellement en fonction de l'audience du site, des produits
+                        vendus grâce au site, des vues, etc...<br><br><strong>Garantie de résultat ou remboursé !&nbsp;</strong>Si pendant un mois, il y a eu une faible audience, ou aucun produit vendu: le prix sera de&nbsp;<strong>0€ !</strong><br><br><strong>Sans engagement</strong>:
+                        un simple appel ou mail pour résilier le service.</p>
+                </div>
+                <div class="modal-footer"><button class="btn btn-primary" type="button">Votre maquette gratuite en 24h !</button><button class="btn btn-light" type="button" data-dismiss="modal">Fermer</button></div>
+            </div>
+        </div>
+    </div>
+    <section id="process" class="bg-primary mb-0">
+        <div class="container">
+            <h2 class="text-uppercase text-center text-white">Processus</h2>
+            <hr class="star-light mb-5">
+            <div class="row">
+                <div class="col-md-4 col-lg-4 d-flex">
+                    <div class="card bg-primary flex-fill" style="background-image:url({{ url_for('static', filename='img/cup-of-coffee-1280537_640.jpg') }} );background-position:center;background-size:cover;">
+                        <div class="card-body" style="background-color:rgba(0,0,0,0.28);background-position:center;background-size:cover;background-repeat:no-repeat;color:rgb(255,255,255);">
+                            <h4 class="text-center card-title"><i class="fa fa-glass" style="font-size:40px;color:rgb(224,216,34);"></i>&nbsp;Rencontre</h4>
+                            <div></div>
+                            <p class="card-text">Rendez-vous formel ou informel, dans vos locaux ou dans un bar, autour d'une table ou d'un café.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 col-lg-4 d-flex mr-auto">
+                    <div class="card bg-primary flex-fill" style="background-image:url({{ url_for('static', filename='img/lightbulb-1875247_640.jpg') }});background-position:center;background-size:cover;">
+                        <div class="card-body" style="background-size:cover;background-position:center;color:rgb(255,255,255);background-color:rgba(74,17,17,0.4);">
+                            <h4 class="text-center card-title"><i class="fa fa-comments" style="font-size:40px;color:rgb(11,82,221);"></i>&nbsp;Idées</h4>
+                            <p class="card-text" style="color:rgb(255,255,255);">Mettre par écrit vos idées, en dessiner les contours, déceler les points faibles, exposer les points forts.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card bg-primary flex-fill" style="background-color:transparent;background-image:url({{ url_for('static', filename='img/christmas-3026685_640.jpg') }});background-size:cover;background-position:center;">
+                        <div class="card-body" style="background-size:auto;background-repeat:no-repeat;background-position:left;background-color:rgba(203,203,203,0.58);">
+                            <h4 class="text-center card-title"><i class="fa fa-heart" style="font-size:40px;color:rgb(190,10,10);"></i>&nbsp;Produit</h4>
+                            <p class="card-text">Livraison d'un produit, documenté, testé, ainsi qu'un service après vente, des mises à jour et des améliorations sur demande.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="partner">
+        <h1 class="text-center">Notre Partenaire</h1>
+        <hr class="star-dark mb-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 col-sm-6 col-md-6 col-lg-4 offset-sm-3 offset-md-3 offset-lg-4">
+                    <div class="card">
+                        <div class="card-header">
+                            <h5 class="mb-0"><a href="http://4-you.fr"><strong>Studio 4you</strong></a></h5>
+                        </div>
+                        <div class="card-body"><a class="card-link" href="#"><img class="img-thumbnail" src="{{ url_for('static', filename='img/foryou.jpg') }}"></a>
+                            <p class="card-text">4you est une<strong>&nbsp;</strong>agence de communication et d'événementiel.<br>Le studio est équipé de nouvelles technologies dont des caméras très hautes définitions ainsi que des drones.<br>Elle fournit des photos et des
+                                vidéos de hautes qualités qui enrichiront vos projets.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="contact" style="background-color:#f7e859;">
+        <div class="container">
+            <h2 class="text-uppercase text-center text-secondary mb-0">Contact</h2>
+            <hr class="star-dark mb-5">
+            <div class="row">
+                <div class="col-lg-8 mx-auto">
+                    <form id="contactForm" name="sentMessage" novalidate="novalidate">
+                        <div class="control-group">
+                            <div class="form-group floating-label-form-group controls mb-0 pb-2"><label>Name</label><input class="form-control" type="text" required="" placeholder="Name" id="name" name="name"><small class="form-text text-danger help-block"></small></div>
+                        </div>
+                        <div class="control-group">
+                            <div class="form-group floating-label-form-group controls mb-0 pb-2"><label>Email Address</label><input class="form-control" type="email" required="" placeholder="Email Address" id="email" name="email"><small class="form-text text-danger help-block"></small></div>
+                        </div>
+                        <div class="control-group">
+                            <div class="form-group floating-label-form-group controls mb-0 pb-2"><label>Phone Number</label><input class="form-control" type="tel" id="phone" placeholder="Phone Number" name="phone"><small class="form-text text-danger help-block"></small></div>
+                        </div>
+                        <div class="control-group">
+                            <div class="form-group floating-label-form-group controls mb-5 pb-2"><textarea class="form-control" rows="5" required="" placeholder="Message" id="message" name="message"></textarea><small class="form-text text-danger help-block"></small></div>
+                        </div>
+                        <div id="success"></div>
+                        <div class="form-group"><button class="btn btn-primary btn-xl" type="submit" id="sendMessageButton">Envoyer</button></div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer class="footer text-center">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 mb-5 mb-lg-0">
+                    <h4 class="text-uppercase mb-4">Location</h4>
+                    <p>2 Cours Honoré Cresp<br>06130, Grasse<br>France</p>
+                </div>
+                <div class="col-md-6">
+                    <h4 class="text-uppercase mb-4">À Propos de polinfo</h4>
+                    <p class="lead mb-0"><span>Polinfo est une société de conseils et de développement informatique</span></p>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <div class="copyright py-4 text-center text-white">
+        <div class="container"><small>Copyright ©&nbsp;POLINFO 2018</small></div>
+    </div>
+    <div class="d-lg-none scroll-to-top position-fixed rounded"><a class="d-block js-scroll-trigger text-center text-white rounded" href="#page-top"><i class="fa fa-chevron-up"></i></a></div>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.2/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
+    <script src="{{ url_for('static', filename='js/script.min.js?h=3dc75c4166e4986e5409754caf677c60') }}"></script>
+</body>
+
+</html>
